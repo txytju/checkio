@@ -13,14 +13,7 @@ def checkio(data):
     x3 = data[4]
     y3 = data[5]
 
-    A = np.array([2*(x1-x2), 2*(y1-y2)], [2*(x1-x3), 2*(y1-y3)])
-    b = np.array([x1**2-x2**2+y1**2-y2**2, x1**2-x3**2+y1**2-y3**2])
 
-    x, y = np.linalg.solve(A, b)
-
-    r = math.sqrt((x-x1)**2 + (y-y1)**2)
-
-    return "({}-4)^2+({}-4)^2={}^2".format(x,y,r)
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

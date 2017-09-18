@@ -1,3 +1,13 @@
+# 字符串的拼写检查
+# 要求：
+# 至少10个字符
+# 至少1个数字
+# 至少一个大写一个小写
+# 前提条件：输入的字符串只可能由大小写字母和数字组成
+
+
+
+
 def checkio(data):
 
     #replace this for solution
@@ -26,6 +36,26 @@ def checkio(data):
     else :
         return False
             
+
+
+# 一种相当有局限性的写法：字符串中不能包含除数字和大小写字母之外的东西
+checkio_1 = lambda s : not(
+            len(s)<10
+            or s.isdigit()
+            or s.isalpha()
+            or s.islower()
+            or s.isupper()
+            )
+
+
+# 正则表达式的写法
+
+import re
+def housepassword(s):
+    digit_re = re.compile("\d")
+    if not digit_re.search(s):
+        return False
+
 
 #Some hints
 #Just check all conditions

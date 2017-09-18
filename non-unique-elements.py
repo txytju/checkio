@@ -27,6 +27,12 @@ def checkio(data):
     return [x for x in data if data.count(x)>1]
 
 
+from collections import Counter
+def non_unique(l):
+    c = Counter(l)
+    unique_l = [i for i in c if c[i]==1]
+    return [i for i in l if i not in unique_l] 
+
 #Some hints
 #You can use list.count(element) method for counting.
 #Create new list with non-unique elements

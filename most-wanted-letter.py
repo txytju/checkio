@@ -1,22 +1,4 @@
-import string
 
-def checkio(text):
-
-    toDelete = string.punctuation + string.digits + " "
-    text = "".join([i for i in text if i not in toDelete]).lower()
-    # text = text.translate(None, string.punctuation)
-    
-    print(text)
-
-    s = 'abcdefghijklmnopqrstuvwxyz'
-    d = {}
-    for i in s :
-        d[i] = 0
-
-    for i in text :
-        d[i] += 1  
-
-    return max(d, key=d.get)
 
 from collections miport Counter
 
